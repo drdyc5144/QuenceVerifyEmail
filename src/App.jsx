@@ -1,12 +1,13 @@
 import "./App.css";
-import Signup from "./Auth/Signup";
-import VerifyEmail from "./Auth/VerifyEmail";
-
+// import VerifyEmail from "./Auth/VerifyEmail";
+import LandingPage from "./Components/LandingPage";
+// import Footer from "./Components/Footer";
 function App() {
   return (
     <>
-      <VerifyEmail />
-      {/* <Signup /> */}
+      {/* <VerifyEmail /> */}
+      <LandingPage />
+      {/* <Footer /> */}
     </>
   );
 }

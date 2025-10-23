@@ -1,18 +1,50 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   VerifyEmailContainer,
   VerifyEmailHolder,
   LogoHolder,
   VerifyEmailHolderRight,
 } from "./VerifyEmailStyle";
-import KwwikQLogo from "../assets/KwikQ.png";
 import { MdOutlineVerifiedUser } from "react-icons/md";
-const VerifyEmail = () => {
+
+const VerifyEmail = ({ length = 6 }) => {
+  const [otp, setOtp] = useState(new Array(length).fill(""));
+  const inputRefs = useRef([]);
+
+  const handleInputChange = (element, index) => {
+    const value = element.value.replace(/[^0-9]/g, "");
+    const newOtp = [...otp];
+    newOtp[index] = value;
+    setOtp(newOtp);
+
+    if (index < length - 1 && value) {
+      inputRefs.current[index + 1].focus();
+    }
+  };
+
+  const handleKeyPress = (e, index) => {
+    if (e.key === "Backspace") {
+      const newOtp = [...otp];
+
+      if (otp[index]) {
+        newOtp[index] = "";
+        setOtp(newOtp);
+      } else if (index > 0) {
+        inputRefs.current[index - 1].focus();
+        newOtp[index - 1] = "";
+        setOtp(newOtp);
+      }
+    }
+  };
+
   return (
     <VerifyEmailContainer>
       <VerifyEmailHolder>
         <LogoHolder>
-          <img src={KwwikQLogo} alt="" />
+          <img
+            src="https://res.cloudinary.com/dp75oveuw/image/upload/v1760468659/logo-removebg-preview_mouzpd.png"
+            alt=""
+          />
         </LogoHolder>
         <VerifyEmailHolderRight>
           <div className="top_holder">
@@ -26,12 +58,19 @@ const VerifyEmail = () => {
           <div className="InputHolder">
             <p>Input code</p>
             <div>
-              <input type="text" inputMode="numeric" maxLength={1} />
-              <input type="tel" inputMode="numeric" maxLength={1} />
-              <input type="tel" inputMode="numeric" maxLength={1} />
-              <input type="tel" inputMode="numeric" maxLength={1} />
-              <input type="tel" inputMode="numeric" maxLength={1} />
-              <input type="tel" inputMode="numeric" maxLength={1} />
+              {otp.map((length, index) => (
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  maxLength={1}
+                  key={index}
+                  ref={(ref) => (inputRefs.current[index] = ref)}
+                  value={length}
+                  onChange={(e) => handleInputChange(e.target, index)}
+                  onKeyDown={(e) => handleKeyPress(e, index)}
+                  autoFocus={index === 0}
+                />
+              ))}
             </div>
           </div>
           <div className="button-holder">
