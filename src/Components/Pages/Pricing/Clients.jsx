@@ -127,14 +127,12 @@ const ClientsContainer = styled.div`
   background-color: #eaebfe;
   padding: 40px 0;
 
-  /* Tablet */
   @media (max-width: 768px) {
     gap: 30px;
     padding: 30px 0;
     min-height: auto;
   }
 
-  /* Mobile */
   @media (max-width: 480px) {
     gap: 20px;
     padding: 20px 0;
@@ -173,7 +171,6 @@ const Main = styled.div`
     text-align: center;
   }
 
-  /* Tablet */
   @media (max-width: 768px) {
     height: auto;
     padding: 0 20px;
@@ -191,7 +188,6 @@ const Main = styled.div`
     }
   }
 
-  /* Mobile */
   @media (max-width: 480px) {
     height: auto;
     padding: 0 15px;
@@ -313,7 +309,6 @@ const Section = styled.div`
     }
   }
 
-  /* Tablet */
   @media (max-width: 768px) {
     padding: 15px;
     min-height: auto;
@@ -361,7 +356,6 @@ const Section = styled.div`
     }
   }
 
-  /* Mobile */
   @media (max-width: 480px) {
     padding: 10px;
     min-height: auto;
