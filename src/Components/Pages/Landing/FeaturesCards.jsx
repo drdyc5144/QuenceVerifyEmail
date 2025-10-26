@@ -2,8 +2,7 @@
 import { IoTimeOutline } from "react-icons/io5";
 import { BsQrCodeScan } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { LuChartColumnIncreasing } from "react-icons/lu";
-import { TbBackground } from "react-icons/tb";
+import { TbChartBar } from "react-icons/tb";
 
 export const CardsDisplay = [
   {
@@ -29,13 +28,13 @@ export const CardsDisplay = [
     icons: <IoMdNotificationsOutline />,
     Title: "Notification Alerts (via mail)",
     Description:
-      "Easily add customers to the queue by scanning a unique QR code. This eliminates manual entry, speeds up the check-in process, and ensures accuracy for both staff and customers.",
+      "Stay updated in real time with instant notifications when it’s a customer’s turn or when a queue is moving slowly. This helps staff manage flow efficiently.",
     backgroundcolor: "#0092BB",
   },
 
   {
     id: 4,
-    icons: <LuChartColumnIncreasing />,
+    icons: <TbChartBar />,
     Title: " Analytics & Data Insights",
     Description:
       "Gain valuable insights with real-time analytics on customer flow, wait times, and service performance. Track trends, identify bottlenecks, and make data-driven decisions to improve operational efficiency.",

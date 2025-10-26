@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import Features from "./Features";
-import About from "./About";
+import Features from "./Landing/Features";
+import About from "./Landing/About";
 import Works from "./Works";
-import Clients from "./Clients";
-import KeyFeatures from "./KeyFeatures";
-import Faq from "./Faq";
-import GetStarted from "./GetStarted";
+import Clients from "./Landing/Clients";
+import KeyFeatures from "./Landing/KeyFeatures";
+import Faq from "./Landing/Faq";
+import GetStarted from "./Landing/GetStarted";
 import styled from "styled-components";
 
 const LandingPage = () => {
@@ -58,7 +58,7 @@ const LandingPage = () => {
         <DesignHolder></DesignHolder>
       </LandingContainer>
 
-      <Features />
+      {/* <Features />
       <div ref={worksRef}>
         <Works />
       </div>
@@ -68,7 +68,7 @@ const LandingPage = () => {
       </div>
       <Clients />
       <Faq />
-      <GetStarted />
+      <GetStarted /> */}
     </>
   );
 };

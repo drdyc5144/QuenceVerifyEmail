@@ -1,13 +1,14 @@
 import "./App.css";
 // import VerifyEmail from "./Auth/VerifyEmail";
-import LandingPage from "./Components/LandingPage";
-// import Footer from "./Components/Footer";
+// import Landing from "./Components/Pages/Landing/LandingPage";
+// import PriceLanding from "./Components/Pages/Pricing/PriceLandingPage";
+
 function App() {
   return (
     <>
       {/* <VerifyEmail /> */}
-      <LandingPage />
-      {/* <Footer /> */}
+      {/* <Landing /> */}
+      {/* <PriceLanding /> */}
     </>
   );
 }
